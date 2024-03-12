@@ -1,8 +1,10 @@
-hold on;
+function [circles, index_number] = generate_circles(a, r_max, n_max)
+    index_number = 193552; % numer Twojego indeksu
+    L1 = 2;
+    circles = matrix(n_max, 3);
+    circles(0) = [randi(a/2) randi(a/2), randi(r_max/2)]
+    for i = 2:n_max
+    end
 
-n_max = 200;
-a=200;
-r_max = a/2;
 
-plot_circle(5,5,5)
-plot_circle(1,7,7)
+end
