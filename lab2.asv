@@ -1,6 +1,22 @@
 function [circles, index_number] = generate_circles(a, r_max, n_max)
-index_number = 193552; % numer Twojego indeksu
-L1 = 2;
+    index_number = 193552; % numer Twojego indeksu
+    L1 = 2;
+    circles = zeros(n_max, 3);
+    validCircle = 1;
+    for i = 1:n_max
+        if validCircle == 0
+            i = i-1;
+        end
+        validCircle = 1;
+        circles(i) = [rand*a rand*a rand*r_max];
+        X = circles(i, 1);
+        Y = circles(i, 2);
+        R = circles(i, 3);
+        if X-R < 0 || X+R > a || Y-R < 0 || Y+R > a
+            validCircle = 0;
+        end
+        for j = 1:i-1
+    end
 
 
 end
