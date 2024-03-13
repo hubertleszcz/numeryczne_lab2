@@ -1,4 +1,4 @@
-function plotCircles(a,circles, n_max)
+function plot_circles(a,circles, n_max)
     axis equal
     axis([0 a 0 a])
     hold on
